@@ -6,12 +6,26 @@ import self
 class Human:
     def __init__(self, name="Human", job=None, home=None, car=None):
         self.name = name
+        self.mood = 0
+        self.car_condition = 0
         self.money = 100
+        self.c = 0
         self.gladness = 50
         self.satiety = 50
         self.job = job
         self.home = home
         self.car = car
+    def chill(self):
+        self.mood += 10
+        self.c += 5
+
+    def clean_home(self):
+        self.mood -= 5
+        self.c = 0
+
+    def to_repair(self):
+        self.car_condition += 100
+        self.money -= 50
 
     def home(self):
         self.home = House
